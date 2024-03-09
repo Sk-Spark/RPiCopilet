@@ -49,8 +49,7 @@ print(completion)
 print("\n\ncompletion message:")
 print(completion.choices[0].message.content)
 
-code = completion.choices[0].message.content.replace("```python","")
-code = completion.choices[0].message.content.replace("```","")
+code = completion.choices[0].message.content.replace("```python","").replace("```","")
 print("\ncode:")
 print(code)
 
