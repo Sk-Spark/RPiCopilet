@@ -7,10 +7,10 @@ def readPrompt():
   if os.path.exists("prompts.txt"):
     # Read prompts from the file
     with open("prompts.txt", "r") as file:
-      prompt = file.read().splitlines()
+      prompt = file.read()
   else:
-    prompt = ["how May I help you?"]
-  return prompt[0]
+    prompt = "how May I help you?"
+  return prompt
 
 def preparePrompt():
     # Read command-line arguments
@@ -22,7 +22,8 @@ def preparePrompt():
     if len(args) > 0:
         prompt = f"""
         I have a raspberry pi 4.
-        whose GPIO 2 is connected to a red led.
+        Whose GPIO 2 is connected to a red led.
+        Whose GPIO 13 is connected to a servo.
         {args[0]}
         Just return the code.
         """
@@ -32,6 +33,7 @@ def preparePrompt():
           prompt = f"""
           I have a raspberry pi 4.
           whose GPIO 2 is connected to a red led.
+          Whose GPIO 13 is connected to a servo.
           {fileData}
           Just return the code.
           """
