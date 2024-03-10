@@ -1,0 +1,1 @@
+"Write a python code to swipe servo from 0 digree to 180 digree 3 time and then turn it off. Use GPIO.setwarnings(False) to disable warnings. "
